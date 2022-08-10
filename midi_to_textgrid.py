@@ -11,29 +11,29 @@ write_name = write_name +'.TextGrid'
 note_scale = {}
 for i in range(40, 100):
     if i%12==0:
-        note_scale[i]=f'C{i//12 - 2}'
+        note_scale[i]=f'C{i//12 - 1}'
     elif i%12==1:
-        note_scale[i]=f'Db{i//12 - 2}'
+        note_scale[i]=f'Db{i//12 - 1}'
     elif i%12==2:
-        note_scale[i]=f'D{i//12 - 2}'
+        note_scale[i]=f'D{i//12 - 1}'
     elif i%12==3:
-        note_scale[i]=f'Eb{i//12 - 2}'
+        note_scale[i]=f'Eb{i//12 - 1}'
     elif i%12==4:
-        note_scale[i]=f'E{i//12 - 2}'
+        note_scale[i]=f'E{i//12 - 1}'
     elif i%12==5:
-        note_scale[i]=f'F{i//12 - 2}'
+        note_scale[i]=f'F{i//12 - 1}'
     elif i%12==6:
-        note_scale[i]=f'Gb{i//12 - 2}'
+        note_scale[i]=f'Gb{i//12 - 1}'
     elif i%12==7:
-        note_scale[i]=f'G{i//12 - 2}'
+        note_scale[i]=f'G{i//12 - 1}'
     elif i%12==8:
-        note_scale[i]=f'Ab{i//12 - 2}'
+        note_scale[i]=f'Ab{i//12 - 1}'
     elif i%12==9:
-        note_scale[i]=f'A{i//12 - 2}'
+        note_scale[i]=f'A{i//12 - 1}'
     elif i%12==10:
-        note_scale[i]=f'Bb{i//12 - 2}'
+        note_scale[i]=f'Bb{i//12 - 1}'
     elif i%12==11:
-        note_scale[i]=f'B{i//12 - 2}'
+        note_scale[i]=f'B{i//12 - 1}'
         
 tg = textgrid.TextGrid.fromFile(tg_fname)
 mid = mido.MidiFile(midi_fname)
