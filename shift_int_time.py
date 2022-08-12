@@ -12,12 +12,19 @@ tg = textgrid.TextGrid.fromFile(tg_fname)
 shift_amount = tg[0][shift_loc-1].minTime - tg[2][loc-1].minTime
 
 tg[2][loc-2].maxTime += shift_amount
-tg[0][-1].maxTime += shift_amount
-tg[1][-1].maxTime += shift_amount
+
+
 
 for i, j in enumerate(tg[2]):
     if i >= loc-1:
         j.minTime += shift_amount
-        j.maxTime += shift_amount        
+        j.maxTime += shift_amount
         
+tg.maxTime = tg[2][-1].maxTime
+tg[0].maxTime = tg[2][-1].maxTime
+tg[1].maxTime = tg[2][-1].maxTime
+tg[2].maxTime = tg[2][-1].maxTime
+tg[0][-1].maxTime = tg[2][-1].maxTime
+tg[1][-1].maxTime = tg[2][-1].maxTime
+
 tg.write(write_name)
