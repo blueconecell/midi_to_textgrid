@@ -56,7 +56,7 @@ for i in time:
     if i > 0.01:
         time_accumulate.append(stacking)
     stacking +=i    
-    
+
 def tg_creater(time_accumulate, note):
     time=[0.0]
     time = time + time_accumulate
@@ -68,7 +68,5 @@ def tg_creater(time_accumulate, note):
     for i in range(time_len-2):
         tg[2].add(float(time[i+1]), float(time[i+2]), f"{note[i]}") 
         
-        
-#main
 tg_creater(time_accumulate,note)
 tg.write(write_name)
